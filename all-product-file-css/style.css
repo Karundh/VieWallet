@@ -1,0 +1,272 @@
+/* ✅ GLOBAL RESET Y ESTILOS GENERALES */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.container {
+    padding: 16px;
+}
+
+
+/* ✅ PRODUCTO PRINCIPAL */
+.product0-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product0-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.product0-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product0-details {
+    flex: 1;
+    min-width: 250px;
+    font-size: 18px;
+}
+
+.description0 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.price0 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.select-size {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.button0-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button0 {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #007aff;
+    border-radius: 5px;
+}
+
+.button0.apple-pay {
+    background-color: black;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* ✅ RECOMENDADOS */
+.recommended-section {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.recommended-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.recommended-container {
+    position: relative;
+    max-width: 1270px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.recommended-items {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 30px;
+    
+}
+
+.recommended-product {
+    flex: 0 0 380px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+}
+
+.recommended-product img {
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.recommended-product p {
+    font-size: 18px;
+    margin: 12px 0 6px;
+}
+
+.recommended-product span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.arrow-rec {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.left-rec {
+    left: 0;
+}
+
+.right-rec {
+    right: 0;
+}
+
+/* ✅ RESPONSIVE: TABLETS */
+@media (max-width: 768px) {
+    .product0-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product0-image,
+    .product0-details {
+        text-align: center;
+        min-width: 100%;
+    }
+
+    .button0-container {
+        justify-content: center;
+    }
+
+    .recommended-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .recommended-items {
+        gap: 20px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .recommended-product {
+        flex: 0 0 80%;
+        height: auto;
+    }
+
+    .recommended-product p {
+        font-size: 16px;
+    }
+
+    .recommended-product span {
+        font-size: 17px;
+    }
+
+    .arrow-rec {
+        top: 40%;
+        transform: translateY(-40%);
+    }
+}
+
+/* ✅ RESPONSIVE: MÓVILES */
+@media (max-width: 480px) {
+    .product0-details {
+        font-size: 14px;
+    }
+
+    .description0 {
+        font-size: 14px;
+    }
+
+    .price0 {
+        font-size: 20px;
+    }
+
+    .select-size {
+        font-size: 18px;
+    }
+
+    .button0 {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .recommended-product p {
+        font-size: 15px;
+    }
+
+    .recommended-product span {
+        font-size: 16px;
+    }
+
+    .recommended-product {
+        flex: 0 0 90%;
+        height: auto;
+    }
+}

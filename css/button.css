@@ -1,0 +1,449 @@
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+ 
+  
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1e7c7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #284e14;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #b7e7b1;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  /* From Uiverse.io by vinodjangid07 */ 
+.button {
+  width: 180px;
+  height: 40px;
+  background-image: linear-gradient(rgb(153, 207, 153), rgb(130, 215, 96));
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: 1px 3px 0px rgb(212, 222, 205);
+  transition-duration: .3s;
+}
+
+.cartIcon {
+  width: 14px;
+  height: fit-content;
+}
+
+.cartIcon path {
+  fill: white;
+}
+
+.button:active {
+  transform: translate(2px ,0px);
+  box-shadow: 0px 1px 0px rgb(255, 255, 255);
+  padding-bottom: 1px;
+}
+
+
+
+
+/* Estilos del contenedor de productos */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la tarjeta de cada producto */
+.card {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 190px;
+  height: 260px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 120ms;
+  overflow: hidden;
+  box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.card:active {
+  transform: scale(.95);
+}
+
+/* Estilo de la sombra interna */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 25px 5px rgba(255, 255, 255, .5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Botón "Agregar al carrito" */
+.card::after {
+  content: "View Product";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  padding-left: 15px;
+  background: #181818;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  line-height: 50px;
+  text-transform: uppercase;
+  z-index: 2;
+  transition: all .2s ease-in;
+  pointer-events: none;
+}
+
+.card:hover::after {
+  bottom: 0;
+}
+
+.card:active::after {
+  content: "Buying";
+  height: 65px;
+}
+
+/* Imagen del producto */
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(1px 3px 5px #18181815);
+  transition: all .5s ease-in;
+  animation: shoes 1s ease infinite alternate;
+}
+
+.img-product {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes shoes {
+  from {
+    top: 48%;
+  }
+  to {
+    top: 52%;
+  }
+}
+
+.card:hover .image {
+  transform: rotate(15deg) translate(-35%, -25%);
+  animation: none;
+}
+
+.card:hover .img-product {
+  width: 200px;
+}
+
+/* Texto (nombre + precio) */
+.text {
+  position: absolute;
+  top: 15%;
+  left: -80%;
+  color: #181818;
+  transition: all .3s ease-in;
+}
+
+.text span {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card:hover .text {
+  top: 15%;
+  left: 5%;
+}
+
+/* Responsive: móvil máximo 2 por fila */
+@media (max-width: 768px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilos para el carrito *//* HEADER */
+.main-header {
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+/* CARRITO */
+/* ==== BOTÓN DEL CARRITO ==== */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000; /* Muy alto para que siempre esté encima */
+}
+
+.icon-cart {
+  width: 24.38px;
+  height: 60.52px;
+  fill: black;
+}
+
+.quantity {
+  font-size: 14px;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-weight: bold;
+}
+
+/* ==== CARRITO LATERAL ==== */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 360px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 9999; /* Superior al header */
+  overflow-y: auto;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.close-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-item-qty button {
+  padding: 4px 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart-footer {
+  margin-top: 30px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #181818;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #333;
+}
+
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+button {
+  position: relative;
+  width: 130px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px #111111 solid;
+  overflow: hidden;
+}
+
+.text1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 22%;
+}
+
+.text2 {
+  position: absolute;
+  top: 25%;
+  left: -50px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+}
+
+.icon::before {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  z-index: -1;
+  content: '';
+  width: 130px;
+  height: 33px;
+  border-radius: 30px;
+  background-color: #111111;
+}
+
+button:hover .icon {
+  transform: translateX(96px);
+  transition: transform 0.5s;
+}
+
+button:hover .text {
+  transform: translateX(100px);
+  transition: transform 0.6s;
+}
+
+button:active {
+  transform: scale(1.03);
+}
+

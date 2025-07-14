@@ -1,0 +1,280 @@
+/* From Uiverse.io by lowa2006 */
+.card {
+  width: 50em;      /* Más ancho que antes */
+  min-height: 55em; /* Más alto para que no se corte */
+  height: auto;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em 2em 1em;
+  box-sizing: border-box;
+  margin: 2em auto;
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 1.72em;
+  margin: 0em;
+}
+
+.card .img {
+  width: 6.8em;
+  height: 6.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .share {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+}
+
+.card a {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+  color: rgb(70, 228, 117);
+}
+
+.card button {
+  padding: 1.8em 3.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+  background: rgb(78, 255, 71);
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para el carrito */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.icon-cart {
+  width: 24.38px;
+  height: 30.52px;
+}
+
+.quantity {
+  font-size: 18px;
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  background-color: red;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 0px 8px;
+  pointer-events: none;
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 360px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-item-qty button {
+  padding: 2px 8px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.cart-item-qty button:hover {
+  background-color: #bbb;
+}
+
+.cart-footer {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #181818;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #333;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 480px) {
+ .card {
+    width: 80vw; /* o 70vw para que sea aún más pequeña */
+    max-width: 300px; /* para limitar el tamaño máximo */
+    height: auto;
+    clip-path: none;
+    border-radius: 15px;
+    padding: 0.8em;
+    min-height: auto;
+    margin: 1.5em auto; /* para centrar */
+  }
+
+  .card .img {
+    width: 5em;
+    height: 5em;
+  }
+
+  .card .info {
+    font-size: 1.2em;
+  }
+
+  .card span {
+    font-size: 0.9em;
+  }
+
+  .btn-cart {
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .quantity {
+    font-size: 16px;
+    padding: 0 6px;
+    top: -3px;
+    right: -4px;
+  }
+
+  .cart-sidebar {
+    width: 100vw;
+    right: -100vw;
+  }
+
+  .cart-sidebar.active {
+    right: 0;
+  }
+
+  .checkout-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    width: 60em;
+    min-height: 60em;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <title>Giftos</title>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/ads.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header -->
+    <header class="header_section">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>VieWallet</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="user_option">
+            <button id="cartButton" class="btn-cart">
+              <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
+                <title>icon-cart</title>
+                <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Z"></path>
+              </svg>
+              <span class="quantity">0</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div class="product-container">
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="closeCart" class="close-btn">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <strong>Total: $<span id="cartTotal">0</span></strong>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button id="clearCartBtn" class="checkout-btn" style="background-color: #999;">Clear Cart</button>
+          <button id="checkoutBtn" class="checkout-btn">Check Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Section -->
+  <section class="info_section layout_padding2-top">
+    <div class="card">
+      <img src="images/favicon.png" width="200px" alt="Logo VieWallet" style="display: block; margin: 0 auto 1rem auto;" />
+      <h3><span>Got questions? We're here for you!</span></h3>
+      <br><br>
+      <p class="info">
+        Don’t hesitate to reach out — our team is ready to help.
+        At VieWallet, we craft premium wallets that combine style, durability, and smart design.
+        Upgrade your everyday carry with a wallet that speaks quality.
+      </p>
+      <div class="share">
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.vinted.es" target="_blank"><i class="fas fa-store"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <br><br>
+      <button onclick="location.href='shop.html'">See All Products</button>
+    </div>
+  
+  </section>
+  <script src="js/cart-header.js"></script>
+</body>
+
+</html>
