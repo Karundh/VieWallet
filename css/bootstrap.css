@@ -1034,11 +1034,16 @@ pre code {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
+
   .col-md-5 {
-    -ms-flex: 0 0 41.666667%;
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%;
-  }
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+
+  margin-left: 63%;
+  margin-right: 10%; /* Esto centra el bloque horizontalmente */
+    margin-top: -200px; /* Cambia este valor para subir o bajar más */
+}
   .col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;

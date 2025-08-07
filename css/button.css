@@ -65,13 +65,14 @@
     transform: scale(0.95);
   }
   /* From Uiverse.io by vinodjangid07 */ 
+
 .button {
   width: 180px;
   height: 40px;
   background-image: linear-gradient(rgb(153, 207, 153), rgb(130, 215, 96));
   border: none;
   border-radius: 50px;
-  color: rgb(255, 255, 255);
+  color: white;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -80,7 +81,19 @@
   cursor: pointer;
   box-shadow: 1px 3px 0px rgb(212, 222, 205);
   transition-duration: .3s;
+   margin-left: auto%;
+  margin-right: 1000%;
+  margin-top: -50%;
 }
+
+@media (max-width: 768px) {
+  .button {
+    margin-left: 60px;   /* Cambia estos valores según necesites */
+    margin-right: 10px;
+    margin-top: -20%;
+  }
+}
+
 
 .cartIcon {
   width: 14px;
@@ -389,30 +402,22 @@
 
 
 /* From Uiverse.io by andrew-demchenk0 */ 
-button {
+button01 {
   position: relative;
   width: 130px;
   height: 35px;
   border-radius: 30px;
-  background-color: white;
-  border: 1px #111111 solid;
+
   overflow: hidden;
 }
 
-.text1 {
+.text01 {
   font-size: 15px;
   font-weight: 600;
   margin-left: 22%;
 }
 
-.text2 {
-  position: absolute;
-  top: 25%;
-  left: -50px;
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
-}
+
 
 .icon {
   position: absolute;
@@ -433,17 +438,17 @@ button {
   background-color: #111111;
 }
 
-button:hover .icon {
+button01:hover .icon {
   transform: translateX(96px);
   transition: transform 0.5s;
 }
 
-button:hover .text {
+button01:hover .text {
   transform: translateX(100px);
   transition: transform 0.6s;
 }
 
-button:active {
+button01:active {
   transform: scale(1.03);
 }
 

@@ -243,38 +243,60 @@ a:focus {
   display: block;
 }
 
-
-
-
-
 .slider_section .slider_container {
   color: #fefefe;
   background-color: #000000;
-  background-color: #014421
-;
+  background-color: #014421;
   padding: 25px;
   border-radius: 0 0 15px 15px;
+  min-height: 400px; /* Fijamos altura mínima del fondo */
+  display: flex;
 }
+@media (max-width: 767px) {
+  .slider_section .slider_container {
+    min-height: 700px; /* Ajusta este valor si lo quieres más pequeño */
+    flex-direction: column; /* Opcional, para mejor organización en móvil */
+  }
+}
+
+.slider_section .carousel_btn-box {
+  position: absolute;
+  bottom: -25px; /* escritorio */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+@media (max-width: 767px) {
+  .slider_section .carousel_btn-box {
+    bottom: 10px; /* más abajo, pero dentro del contenedor verde */
+  }
+}
+
 
 .slider_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
 .slider_section .img-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 275px;
+  height: 275px;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 45px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .slider_section .img-box img {
-  width: 275px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
 }
+
 
 .slider_section .detail-box {
   padding-left: 45px;
@@ -315,7 +337,7 @@ a:focus {
           align-items: center;
   position: absolute;
   bottom: -25px;
-  left: 5%;
+  left: 50%;
   padding: 7px 10px;
   border-radius: 5px 5px 0 0;
 }
@@ -335,6 +357,7 @@ a:focus {
   color: #000000;
   font-size: 14px;
 }
+
 
 .shop_section .heading_container {
   margin-bottom: 20px;
@@ -752,8 +775,7 @@ a:focus {
   right: 0;
 }
 
-/* info section */
-.info_section {
+/* info section */.info_section {
   position: relative;
   background-color: #2d2d2d;
   color: #ffffff;
